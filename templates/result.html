@@ -12,7 +12,14 @@
     border:2;
     }
     body{
-    background-color: gray;
+    background-color: #B2BABB;
+    }
+	table, th, td {
+        border: 2px solid black;
+        border-radius: 10px;
+    }
+    table tr th{
+        color:white;
     }
 
     </style>
@@ -20,11 +27,14 @@
 <body>
 <div>
     {% for item in data %}
-    <table border="2" cellpadding="10px" cellspacing="10px" width="500px">
-        <tr align-item="center">
-            <th>
+    <table border="2" cellpadding="10px" cellspacing="10px" width="500px" bgcolor = "#F7F9F9">
+        <tr align-item="center" bgcolor = "#1A23AD">
+            <th >
                 {{ item.2 }}
             </th>
+			<th>
+			Total Votes
+			</th>
         </tr>
         <tr>
             <td>
