@@ -15,7 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from polling.views import signuppage, loginpage, firstpage, page, loginpage_d, create_poll, poll, poll_result
+from polling.views import signuppage, loginpage, firstpage, page, loginpage_d, create_poll, poll, poll_result, \
+    changepassword, ResetPassword, Emailverification
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,6 +25,10 @@ urlpatterns = [
     path('signuppage', signuppage),
     path('signuppage_data', page),
     path('loginpage_data', loginpage_d),
+
+    path('Emailverification', Emailverification),
+    path('ResetPassword', ResetPassword),
+    path('changepassword', changepassword),
     path('create_poll', create_poll),
     path('poll', poll),
     path('poll_result', poll_result),
